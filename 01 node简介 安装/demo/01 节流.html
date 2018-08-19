@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>40-js</title>
+  <style>
+    *{margin:0;padding:0;}
+
+  </style>
+</head>
+<body style="height: 20000px;">
+  <script>
+    /*
+      节流：让事件按照指定的时间间隔来触发
+
+      防抖：事件函数只会执行一次，让逻辑在动作结束后才触发。
+
+      数组扁平化：多维数组实现降维（一维）
+
+      [1,[2,[3,[4]],5]
+     */
+
+    // function throttle(f, time){
+    //   let tiemr = null
+    //   let startTime = new Date()
+    //   return function(){
+    //     let args = [].slice.call(arguments)
+
+    //     let time_ = new Date() - startTime
+    //     if(time_ > time){
+    //       f.apply(this, args)
+    //       startTime = new Date
+    //     }
+    //   }
+    // }
+
+    // function debounce(f, time) {
+    //   let timer = null
+    //   return function(){
+    //     let args = [].slice.call(arguments)
+    //     clearTimeout(timer)
+    //     timer = setTimeout(f, time)
+    //   }
+    // }
+
+
+    // const fn = () => {
+    //   console.log("scroll")
+    // }
+
+    // const throFn = debounce(fn, 500)
+
+
+    // document.onscroll = throFn
+    const arr = [1,[2,[3,[4]]],5, [6]]
+
+    // function flatten(arr){
+    //   let res = []
+    //   // for (let i = 0, len = arr.length; i < len; i++){
+    //   //   let item = arr[i]
+    //   //   if(Array.isArray(item)){
+    //   //     res = res.concat(flatten(item))
+    //   //   }else{
+    //   //     res.push(item)
+    //   //   }
+    //   // }
+
+    //   //console.log(arr.toString().split(","))
+
+
+
+
+    //   return res
+    // }
+
+
+    const flatten = arr => arr.reduce((prev, item) => {
+      return prev.concat(Array.isArray(item) ? flatten(item) : item)
+    }, [])
+
+    const newArr = flatten(arr)
+
+    console.log(newArr)
+
+  </script>
+</body>
+</html>
