@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(document).click(() => {
+      $.post("http://localhost:3000/postDateShow", {name: 'fengyu', age: 18}, (msg) => {
+        console.log(msg)
+      })
+    }) 
+    
+    
+  </script>
+</body>
+</html>

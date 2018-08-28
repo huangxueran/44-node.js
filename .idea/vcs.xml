@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/07 koa-router 静态资源托管 post数据解析 文件上传/UPLOAD" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/07 koa-router 静态资源托管 post数据解析 文件上传/koa-body-upload" vcs="Git" />
   </component>
 </project>
